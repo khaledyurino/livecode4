@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>running product list</h1>
+  <table>
+    <tr>
+      <th>Nama</th>
+      <th>SKU</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Is Discontinued</th>
+      <th>Action</th>
+    </tr>
+    <% for (let i = 0; i<products.length; i++) %>
+    <tr>
+      <td><%= products[i].name %></td>
+      <td><%= products[i].sku %></td>
+      <td><%= products[i].quantity %></td>
+      <td><%= products[i].price %></td>
+      <td><%= products[i].category %></td>
+      <td><%= products[i].is_discontinued %></td>
+      <td><a href="/products/:product_id/discontinued">Set Discontinued</a> | <a href="/products/category/:category_id">Explore Category</a></td>
+    </tr>
+    <% } %>
+  </table>
+</body>
+</html>
